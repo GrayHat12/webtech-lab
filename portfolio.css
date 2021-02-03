@@ -1,12 +1,11 @@
 body {
-  background-image: url(/giphy.gif);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: scroll;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -15,17 +14,20 @@ body::-webkit-scrollbar {
 }
 .head {
   margin-left: 20px;
-  color: white;
   background-color: #455aa3;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
   margin-bottom: 30px;
+  color: white;
 }
 .divider {
   height: 2px;
-  background-color: white;
+  background-color: #455aa3;
   max-width: 30%;
+}
+.head .divider {
+  background-color: white;
 }
 .head * {
   padding: 0;
@@ -36,7 +38,7 @@ body::-webkit-scrollbar {
   width: 20%;
 }
 .contact a {
-  color: white;
+  color: #455aa3;
   text-decoration: none;
 }
 .contact i {
@@ -48,14 +50,11 @@ body::-webkit-scrollbar {
 .flex {
   display: flex;
   justify-content: start;
-  height: -webkit-fill-available;
   padding-bottom: 30px;
 }
 .right {
   margin-left: 20px;
   width: -webkit-fill-available;
-  height: 75vh;
-  overflow-y: scroll;
 }
 .right::-webkit-scrollbar {
   display: none;
@@ -65,14 +64,14 @@ body::-webkit-scrollbar {
 }
 .right > section > h1 {
   margin-top: 0px;
-  color: white;
+  color: #455aa3;
 }
 .right .divider {
   width: 90%;
   max-width: 90%;
 }
 .right h2 {
-  color: white;
+  color: #455aa3;
 }
 .right h3,
 .item h3 {
@@ -80,7 +79,7 @@ body::-webkit-scrollbar {
 }
 .right sub {
   font-style: italic;
-  color: white;
+  color: #455aa3;
   margin: 0px;
 }
 .right h2,
@@ -99,4 +98,25 @@ body::-webkit-scrollbar {
 }
 .item a {
   text-decoration: none;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  padding-left: 0px;
+}
+.grid-item {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  color: white;
+  background-color: #455aa3;
+  text-align: left;
+}
+@media (max-width: 733px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
 }
