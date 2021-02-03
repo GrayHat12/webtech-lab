@@ -132,7 +132,10 @@ tr > td:first-child > .data {
 }
 .notehead {
   box-shadow: 2px 2px 2px 2px #ccc;
-  padding: 5px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 .note > textarea {
   width: inherit;

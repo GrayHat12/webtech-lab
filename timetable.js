@@ -32,7 +32,7 @@ const subjects = {
     "MTR": "mentoring"
 };
 
-const defaultlikedSubjects = [
+let defaultlikedSubjects = [
     "CAL302",
     "CSA302",
     "CSE352",
@@ -108,7 +108,6 @@ function fetchIndexes() {
         else indexes[i] = "";
     }
 }
-
 function cursortoPointers(element) {
     element.classList.add("pointer");
 };
@@ -134,6 +133,7 @@ function colorSubjects(element) {
     let subjectspan = element.getElementsByTagName("span").item(0);
     if (!subjectspan) return;
     let subject = subjectspan.textContent.trim();
+    element.className = "data";
     if (defaultlikedSubjects.includes(subject)) {
         element.classList.add("liked");
     } else {
@@ -175,7 +175,25 @@ document.onclick = (ev) => {
     active = false;
 }
 
-function createNoteElement(posx, posy, note, index) {
+function refresh() {
+    let liked = localStorage.getItem("liked");
+    liked = JSON.parse(liked);
+    if (liked) defaultlikedSubjects = liked;
+    initialise();
+}
+
+function changeLike(subject) {
+    let liked = defaultlikedSubjects.includes(subject);
+    if (liked) {
+        defaultlikedSubjects = defaultlikedSubjects.filter(x => x !== subject);
+    } else {
+        defaultlikedSubjects.push(subject);
+    }
+    localStorage.setItem("liked", JSON.stringify(defaultlikedSubjects));
+    refresh();
+};
+
+function createNoteElement(posx, posy, note, index, subject) {
     let elem = document.createElement("div");
     elem.className = "note";
     elem.setAttribute("style", `left:${posx}px;top:${posy}px`);
@@ -185,7 +203,23 @@ function createNoteElement(posx, posy, note, index) {
     elem.setAttribute("index", `${index}`);
     let head = document.createElement("div");
     head.className = "notehead cursive";
-    head.textContent = "NOTE";
+    let headspan = document.createElement("span");
+    headspan.textContent = "NOTE";
+    let subjectName = subjects[subject];
+    head.appendChild(headspan);
+    let like = document.createElement("i");
+    let liked = defaultlikedSubjects.includes(subject);
+    console.log(subject);
+    if (subjectName) {
+        console.log(subjectName);
+        like.className = liked ? "fas fa-heart" : "far fa-heart";
+        like.onclick = (likeevent) => {
+            let curclass = likeevent.target.className;
+            likeevent.target.className = curclass === "far fa-heart" ? "fas fa-heart" : "far fa-heart";
+            changeLike(subject);
+        };
+        head.appendChild(like);
+    }
     elem.appendChild(head);
     let textarea = document.createElement("textarea");
     textarea.value = note;
@@ -225,20 +259,28 @@ function onElementClick(ev) {
     let num = parseInt(index.substring(5));
     if (!index) return;
     let note = indexes[num];
-    createNoteElement(ev.target.offsetLeft + 50, ev.target.offsetTop + 50, note, num);
+    console.log(ev.target);
+    let text = '';
+    try {
+        let subject = ev.target.getElementsByTagName("span").item(0);
+        text = subject.textContent.trim();
+    } catch (err) { };
+    createNoteElement(ev.target.offsetLeft + 50, ev.target.offsetTop + 50, note, num, text);
     active = true;
     ev.stopPropagation();
 };
 
 fetchIndexes();
 
-Array.from(allData).forEach((element, index) => {
-    element.setAttribute("id", `index${index}`);
-    element.setAttribute("onclick", "onElementClick(event)");
-    cursortoPointers(element);
-    addLabels(element);
-    colorSubjects(element);
-});
+function initialise() {
+    Array.from(allData).forEach((element, index) => {
+        element.setAttribute("id", `index${index}`);
+        element.setAttribute("onclick", "onElementClick(event)");
+        cursortoPointers(element);
+        addLabels(element);
+        colorSubjects(element);
+    });
+}
 
 function setCurrentClassInfo(info) {
     currentClassEl.innerHTML = `${info}`;
@@ -297,4 +339,5 @@ function getCurrentClass(time) {
     else setCurrentClassInfo("");
 }
 
+refresh();
 getCurrentClass();
