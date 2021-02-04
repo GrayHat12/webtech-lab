@@ -306,10 +306,12 @@ function animateEl(td) {
 };
 
 function animate(day, slot) {
+    console.log(day,slot);
     let index = days.indexOf(day);
     let slotindex = slots.indexOf(slot);
+    console.log(index,slotindex);
     if (index <= 0 || index >= 7) return;
-    if (slotindex <= 0 || slotindex >= 8) return;
+    if (slotindex < 0 || slotindex >= 8) return;
     let row = document.getElementsByTagName("tr").item(index);
     let cols = Array.from(row.getElementsByTagName("td"));
     cols.shift();
