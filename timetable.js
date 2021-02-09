@@ -99,6 +99,7 @@ const days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 const allData = document.getElementsByClassName("data");
 const body = document.getElementsByTagName("body").item(0);
 
+
 let indexes = new Array(allData.length).fill("");
 
 function fetchIndexes() {
@@ -133,7 +134,8 @@ function colorSubjects(element) {
     let subjectspan = element.getElementsByTagName("span").item(0);
     if (!subjectspan) return;
     let subject = subjectspan.textContent.trim();
-    element.className = "data";
+    if (element.classList.contains("liked")) element.classList.remove("liked");
+    if (element.classList.contains("unliked")) element.classList.remove("unliked");
     if (defaultlikedSubjects.includes(subject)) {
         element.classList.add("liked");
     } else {

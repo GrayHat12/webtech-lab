@@ -108,7 +108,8 @@ tr:first-child > td > .data,
 tr > td:first-child > .data {
   background-color: #0095ed;
 }
-.pointer {
+.pointer,
+.pointer * {
   cursor: pointer;
 }
 .liked {
