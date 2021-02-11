@@ -1,0 +1,49 @@
+
+<html>
+<head>
+	<title>Registration Form</title>
+	<style>
+
+		body{font-family: cursive}
+		input[type=text],input[type=password],textarea{
+			padding: 20px;
+			margin: 5px 0 22px 0;
+			display:inline-block;
+			border: none;
+			background-color: lightgray;
+		}
+		hr{
+			border: 1px dotted ;
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">REGISTRATION FORM</h1>
+	<hr>
+	<form>
+		<label>Username:</label>
+			<input type="text" name="username" maxlength="30"/> <br><br>
+		<label>Password:</label>
+			<input type="Password" name="Password" maxlength="10"/><br><br>
+		<label>E-mail:</label>
+			<input type="text" name="email" maxlength="20"/><br><br>
+		<label>Phone No.:</label>
+			<input type="text" name="num" maxlength="10"/><br><br>
+		<label>Sex:</label><br>
+			<input type="radio" name="sex" value="female" checked="checked"/>Female<br>
+			<input type="radio" name="sex" value="male"/>Male<br>
+			<input type="radio" name="sex" value="other"/>Other
+        <br><br>
+        <label>D.O.B:</label>
+        	<input type="date" name="dob" ></p>
+        <label>Select the languages you know:</label><br>
+        	<input type="checkbox" name="lang" value="Eng"/ checked="checked">English<br>
+        	<input type="checkbox" name="lang" value="Hindi"/>Hindi<br>
+        	<input type="checkbox" name="lang" value="Telegu"/>Telegu<br>
+        	<input type="checkbox" name="lang" value="Tamil"/>Tamil<br><br>
+        <label>Address:</label><br>
+        	<textarea name="Address"></textarea>
+
+    </form>
+</body>
+</html>

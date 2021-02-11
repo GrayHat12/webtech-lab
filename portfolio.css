@@ -120,3 +120,6 @@ body::-webkit-scrollbar {
     grid-template-columns: auto;
   }
 }
+.skills > .flex {
+  padding-bottom: 0px;
+}
