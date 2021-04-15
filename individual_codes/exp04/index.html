@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webtech Lab - Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="card">
+        <div style="text-align: center;">
+            <h1>Register Here!</h1>
+        </div>
+        <form>
+            <div class="form">
+                <div class="line">
+                    <div class="label">
+                        <label for="name">Name :</label>
+                    </div>
+                    <input required pattern="\s*\w+(\s\w+)?(\s\w+)?\s*" class="input" type="text" name="name" id="name">
+                </div>
+                <div class="line">
+                    <div class="label">
+                        <label for="password">Password :</label>
+                    </div>
+                    <input required pattern="[^\s]{8,}" class="input" type="password" name="password" id="password">
+                </div>
+                <div class="line">
+                    <div class="label">
+                        <label for="email">Email ID :</label>
+                    </div>
+                    <input required pattern="([\w\._]+)@([a-zA-Z]+)\.(com)" class="input" type="text" name="email"
+                        id="email">
+                </div>
+                <div class="line">
+                    <div class="label">
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <input required pattern="(\+\d{2})?(\d{10})" class="input" type="tel" name="phone" id="phone">
+                </div>
+                <div class="line">
+                    <div class="label">
+                        <label for="gender">Gender</label>
+                    </div>
+                    <div style="display: flex; justify-content: space-evenly;" class="input">
+                        <div>
+                            <input required type="radio" name="gender" id="male" value="Male"> Male
+                        </div>
+                        <div>
+                            <input required type="radio" name="gender" id="female" value="Female"> Female
+                        </div>
+                        <div>
+                            <input required type="radio" name="gender" id="other" value="Other"> Other
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="label">
+                        <label for="dob">Date of Birth</label>
+                    </div>
+                    <input required class="input" type="date" name="dob" id="dob">
+                </div>
+                <div class="line">
+                    <div class="label">
+                        <label for="lang">Lanuages Known</label>
+                    </div>
+                    <div style="display: flex; justify-content: space-evenly;" class="input">
+                        <div>
+                            <input type="checkbox" name="lang" id="english" value="english"> English
+                        </div>
+                        <div>
+                            <input type="checkbox" name="lang" id="hindi" value="hindi"> Hindi
+                        </div>
+                        <div>
+                            <input type="checkbox" name="lang" id="tamil" value="tamil"> Tamil
+                        </div>
+                        <div>
+                            <input type="checkbox" name="lang" id="telugu" value="telugu"> Telugu
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="label">
+                        <label for="add">Address</label>
+                    </div>
+                    <input required pattern=".*\w{5,}.*" placeholder="Address" class="input" name="add" id="add">
+                </div>
+                <div style="justify-content: flex-start; margin-left: 20px;" class="line">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

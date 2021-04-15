@@ -1,0 +1,11 @@
+.main {
+  margin: auto;
+  width: fit-content;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.middle {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

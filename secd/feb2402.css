@@ -1,0 +1,115 @@
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background-image: url(https://cdnb.thecybertechsolution.com/wp-content/uploads/2019/02/responsive.png);
+  background-repeat: space;
+  background-blend-mode: hard-light;
+}
+header {
+  display: flex;
+  background-color: #2edf5d;
+  min-height: 50px;
+}
+.left {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.left > a {
+  font-size: 1em;
+  color: black;
+  text-decoration: none;
+}
+.right {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+.right > * {
+  margin: 0px 5px;
+}
+.transparent {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.transparent:focus {
+  outline: none;
+}
+.red-button {
+  background-color: #ff1f6c;
+  border: 2px solid #ff1f6c;
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform ease-in-out 100ms;
+}
+.red-button:hover {
+  border: 2px solid rebeccapurple;
+  transform: scale(1.1);
+}
+.red-button:focus {
+  outline: none;
+  box-shadow: 1px 2px #d1074e;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+.card {
+  background-color: #caf2d1;
+  min-width: 500px;
+  border: 2px solid green;
+  transition: transform ease-in-out 500ms;
+}
+.top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2px 10px;
+}
+.imp {
+  background-color: #663394;
+  padding: 5px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+.content {
+  width: 90%;
+  margin: auto;
+}
+.second {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+.card:hover {
+  border-color: #663394;
+  transform: scale(1.2);
+}
+.third {
+  margin-bottom: 8px;
+  color: gray;
+}
+.input {
+  width: -webkit-fill-available;
+  min-height: 25px;
+  margin-bottom: 50px;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  color: gray;
+  align-items: center;
+}

@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>RegistrationForm</title>
+
+    <style>
+        .form {
+            border: 1px solid black;
+            padding: 20px;
+            margin: auto;
+            width: 40%;
+            text-align: center;
+        }
+
+        .label {
+            display: inline-block;
+            width: 150px;
+            text-align: left;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="form">
+        <form style="padding: 0px 10px;">
+            <h1>Register Here!</h1>
+            <label class="label">Name</label>
+            <input type="text" name="name" maxlength="40"><br><br>
+            <label class="label">Password</label>
+            <input type="password" name="password" maxlength="20"><br><br>
+            <label class="label">Email id</label>
+            <input type="text" name="email"><br><br>
+            <label class="label">Phone number</label>
+            <input type="text" name="phoneno" maxlength="10" /><br><br>
+            <div style="text-align: left; padding: 0px 7px;">
+                <label>Sex</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+                <br><br>
+                <label class="label">Date of Birth</label>
+                <input type="date" name="dob"><br><br>
+                <label>Languages known</label>
+                <input type="checkbox" id="english" value="English">
+                <label for="english">English</label>
+                <input type="checkbox" id="telugu" value="Telugu">
+                <label for="telugu">Telugu</label>
+                <input type="checkbox" name="hindi" value="Hindi">
+                <label for="hindi">Hindi</label>
+                <input type="checkbox" name="tamil" value="Tamil">
+                <label for="tamil">Tamil</label><br><br>
+                <label class="label">Address</label>
+                <input type="text" name="address"><br><br>
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+</body>
+
+
+</html>

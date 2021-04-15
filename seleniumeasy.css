@@ -1,0 +1,63 @@
+.red {
+  color: red;
+}
+header {
+  margin: auto;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+.flex {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-evenly;
+}
+.col {
+  width: -webkit-fill-available;
+  margin: 5px;
+  max-width: 250px;
+}
+.heading {
+  padding: 30px 0px;
+  border-style: solid;
+  border-top-width: 5px;
+  border-bottom-width: 2px;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
+.intro {
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.bred {
+  border-color: red;
+}
+.bbrown {
+  border-color: brown;
+}
+.bpink {
+  border-color: pink;
+}
+.bgreen {
+  border-color: green;
+}
+.list {
+  margin-top: 3px;
+}
+.item {
+  margin: 10px 0px;
+}
+.divider {
+  width: 98%;
+  margin: auto;
+  height: 1px;
+  border-top: 1px solid gray;
+}
+.item a {
+  color: brown;
+  text-decoration: none;
+}

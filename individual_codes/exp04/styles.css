@@ -1,0 +1,27 @@
+.card {
+  margin: auto;
+  padding: 20px;
+  border: 1px solid black;
+  min-width: 50%;
+  width: fit-content;
+  max-width: 80%;
+}
+
+.line {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.line > .label {
+  width: 30%;
+}
+
+.line > .input {
+  width: 50%;
+}
+
+.input > div {
+  display: inline;
+}

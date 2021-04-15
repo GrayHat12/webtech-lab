@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block {
+            min-width: 30vw;
+            min-height: 30vw;
+            background-color: palevioletred;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: inline-flex;
+            margin: auto;
+        }
+
+        .block>* {
+            padding: 2rem;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+    </style>
+    <script defer src="mar3102.js"></script>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <div id="block" class="block">
+            <h3>THIS DIV WILL TOOGLE VISIBILITY ON BUTTON CLICK</h3>
+        </div>
+        <br />
+        <button style="margin-top: 2rem;" id="hide">CLICK ME</button>
+    </div>
+</body>
+
+</html>

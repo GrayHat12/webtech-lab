@@ -1,0 +1,23 @@
+.white {
+  background-color: white;
+  color: black;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+.pink {
+  background-color: pink;
+  color: black;
+}
+
+a {
+  color: #333333;
+}
