@@ -16,9 +16,9 @@
             let body = document.getElementsByTagName("body")[0];
             but2.onclick = () => {
                 let color = {
-                    r: Math.random() * (255 - 0),
-                    g: Math.random() * (255 - 0),
-                    b: Math.random() * (255 - 0)
+                    r: Math.random() * (255 - 5) + 5,
+                    g: Math.random() * (255 - 5) + 5,
+                    b: Math.random() * (255 - 5) + 5
                 }
                 body.style.backgroundColor = `rgb(${color.r},${color.g},${color.b})`;
             };
