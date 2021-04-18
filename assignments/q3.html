@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3 & 4 - Assignment</title>
+    <script defer>
+        window.onload = () => {
+            let but = document.getElementById("q3");
+            let but2 = document.getElementById("q4");
+            but.onclick = () => {
+                window.open("https://www.google.com/", "_blank");
+            };
+            let body = document.getElementsByTagName("body")[0];
+            but2.onclick = () => {
+                let color = {
+                    r: Math.random() * (255 - 0),
+                    g: Math.random() * (255 - 0),
+                    b: Math.random() * (255 - 0)
+                }
+                body.style.backgroundColor = `rgb(${color.r},${color.g},${color.b})`;
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <button id="q3">Open another window</button>
+    <button id="q4">Change background color</button>
+</body>
+
+</html>
