@@ -1,3 +1,40 @@
+.center {
+  margin: 1rem auto;
+  max-width: 300px;
+  width: 50vw;
+  background: #16825d;
+  padding: 2rem 1rem;
+  color: white;
+  border-radius: 1rem;
+}
+
+form > div,
+.output {
+  margin: 1rem;
+}
+
+.buttons {
+  display: flex;
+  width: fit-content;
+  justify-content: start;
+  align-items: center;
+}
+
+.buttons > button {
+  margin-right: 1.3rem;
+}
+
+form input {
+  height: 1.2rem;
+}
+
+output {
+  background-color: #21a073;
+  display: block;
+  padding: 0.2rem;
+  width: 200px;
+}
+
 .white {
   background-color: white;
   color: black;

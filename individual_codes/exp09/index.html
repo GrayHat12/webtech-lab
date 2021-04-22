@@ -15,6 +15,26 @@
     <h2><a href="#red">RED</a></h2>
     <h2><a href="#blue">BLUE</a></h2>
     <h2><a href="#pink">PINK</a></h2>
+    <div class="center">
+        <form>
+            <div>
+                <label for="val1">A = </label>
+                <input id="val1" name="val1" placeholder="0" type="number" required pattern="\d+" />
+            </div>
+            <div>
+                <label for="val2">B = </label>
+                <input id="val2" name="val2" placeholder="0" type="number" required pattern="\d+" />
+            </div>
+            <div class="buttons">
+                <button id="mul" type="button">Multiply</button>
+                <button id="div" type="button">Divide</button>
+                <button id="clear" type="button">Clear</button>
+            </div>
+        </form>
+        <div class="output">
+            <output id="x" name="x" for="val1 val2"></output>
+        </div>
+    </div>
 </body>
 
 </html>
