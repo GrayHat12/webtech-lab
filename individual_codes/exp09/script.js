@@ -71,4 +71,5 @@ clear.onclick = (ev) => {
     ev.preventDefault();
     val1.value = 0;
     val2.value = 0;
+    x.value = "0"
 }
