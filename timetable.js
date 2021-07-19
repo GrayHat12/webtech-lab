@@ -271,6 +271,7 @@ function initialise() {
 
 function setCurrentClassInfo(info) {
     currentClassEl.innerHTML = `${info}`;
+    console.log('info',info);
 }
 
 function animateEl(td) {
@@ -280,10 +281,12 @@ function animateEl(td) {
     if (el.innerHTML !== "") {
         el.classList.add("light");
         let subject = el.getElementsByTagName("span").item(0);
+        console.log('subject',subject);
         if (!subject) return;
         subject = subject.getAttribute("title");
         if (!subject || subject.length === 0) return;
         let teacher = el.getElementsByClassName("right bottom").item(0);
+        console.log('teacher',teacher);
         if (!teacher) return;
         teacher = teacher.getAttribute("title");
         if (!teacher || teacher.length === 0) return;
@@ -323,7 +326,7 @@ function animate(day, slot) {
 
 function getCurrentClass(time) {
     let data = getNow(time);
-    console.log(data);
+    console.log('data',data);
     if (data) animate(data[0], data[1]);
     else setCurrentClassInfo("");
 }
