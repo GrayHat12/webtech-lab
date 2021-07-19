@@ -67,6 +67,9 @@ td,
 th {
   border: 2px solid black;
 }
+td {
+  min-width: 100px;
+}
 .top {
   top: 0;
 }

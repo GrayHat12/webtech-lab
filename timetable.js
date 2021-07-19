@@ -1,44 +1,29 @@
 const teachers = {
-    "AB": "Amrita Bagchi",
-    "ANM": "Ms. Anamika Mitra",
-    "DAA": "Prof. Dr. Arun Prakash Agarwal",
-    "DGR": "Dr. Gaurav Raj",
-    "DHR": "Mr. Dharm Raj",
-    "DIV": "Ms. Divya Rathi",
-    "DNR": "Prof. (Dr.) Nitin Rakesh",
-    "DSI": "Mr. Divyanshu Sinha",
-    "GSM": "Dr. Gouri Shankar Mishra",
-    "JAY": "Mr. Jayraj Singh",
-    "MEC": "Ms. Megha Chhabra",
-    "MKG": "Dr. Mayank Kumar Goyal",
-    "NB": "Naveen Bhatnagar",
-    "VIJ": "Dr. Vijendra singh"
+    "ANK": "Prof. (Dr.) Ankur Choudhary",
+    "VIJ": "Dr. Vijendra Singh",
+    "LAT": "Dr. Latha Banda",
+    "ALI": "Dr. Ali Imam Abidi",
+    "NF-1": "New Faculty 1",
+    "NF15": "New Faculty"
 };
 
 const subjects = {
-    "ARP302": "Higher Order Mathematics and Advanced People Skills",
-    "CAL302": "Pattern Recognition Lab",
-    "CSA041": "Introduction to Natural Language Processing",
-    "CSA301": "Soft Computing",
-    "CSA302": "Pattern Recognition",
-    "CSE031": "Digital Image Processing",
-    "CSE032": "Cryptography and Network Security",
-    "CSE041": "Software Project Management",
-    "CSE352": "Web Technologies",
-    "CSP352": "Web Technologies Lab",
-    "CSP392": "Project Based Learning (PBL) -4",
-    "CSP396": "Technical Skill Enhancement Course-2(Application Development Lab)",
-    "HMM305": "Management for Engineers",
-    "MTR": "mentoring"
+    "CAL402": "Applications of AIML in healthcare/ICT/Computer Networks Lab",
+    "CAL402": "Computer Vision Lab",
+    "CSA401": "Computer Vision",
+    "CSA303": "Deep Learning and Its Applications",
+    "CAL303": "Deep Learning and Its Applications Lab",
+    "CSA402": "Applications of AIML in healthcare/ICT/Computer Networks",
+    "CSP495": "Major Project - 1",
+    "CSP499": "Summer Internship III",
+    "OE-4": "Open Elective 4",
+    "CSA051": "Recommender Systems",
+    "CSA061": "Robotics and Intelligent Systems",
+    "CSP495/9": "Major Project / Summer Internship"
 };
 
 let defaultlikedSubjects = [
-    "CAL302",
-    "CSA302",
-    "CSE352",
-    "CSP352",
-    "CSP396",
-    "MTR"
+
 ];
 
 const slots = [
