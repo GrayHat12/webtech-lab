@@ -9,7 +9,7 @@ const teachers = {
 
 const subjects = {
     "CAL402": "Applications of AIML in healthcare/ICT/Computer Networks Lab",
-    "CAL402": "Computer Vision Lab",
+    "CAL401": "Computer Vision Lab",
     "CSA401": "Computer Vision",
     "CSA303": "Deep Learning and Its Applications",
     "CAL303": "Deep Learning and Its Applications Lab",
@@ -19,7 +19,7 @@ const subjects = {
     "OE-4": "Open Elective 4",
     "CSA051": "Recommender Systems",
     "CSA061": "Robotics and Intelligent Systems",
-    "CSP495/9": "Major Project / Summer Internship"
+    "CSA402": "App. AIML - Health/ICT/CN"
 };
 
 let defaultlikedSubjects = [
