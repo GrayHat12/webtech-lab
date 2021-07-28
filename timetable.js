@@ -3,7 +3,7 @@ const teachers = {
     "VIJ": "Dr. Vijendra Singh",
     "LAT": "Dr. Latha Banda",
     "ALI": "Dr. Ali Imam Abidi",
-    "NF-1": "New Faculty 1",
+    "NF-1": "Dr. Sudeshna Chakraborty",
     "NF15": "New Faculty"
 };
 
